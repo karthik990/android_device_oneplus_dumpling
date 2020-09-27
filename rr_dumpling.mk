@@ -21,19 +21,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from dumpling device
 $(call inherit-product, device/oneplus/dumpling/device.mk)
 
-# Inherit some common PixelExperience stuff.
-TARGET_GAPPS_ARCH := arm64
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common RR stuff.
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_dumpling
+PRODUCT_NAME := rr_dumpling
 PRODUCT_DEVICE := dumpling
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := ONEPLUS A5010
 
+TARGET_FACE_UNLOCK_SUPPORTED := true
+RR_BUILDTYPE := Official
+
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
+
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 
 TARGET_VENDOR_PRODUCT_NAME := OnePlus5T
 TARGET_VENDOR_DEVICE_NAME := OnePlus5T
