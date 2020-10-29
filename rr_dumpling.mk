@@ -24,6 +24,9 @@ $(call inherit-product, device/oneplus/dumpling/device.mk)
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
+# Inherit PixelGApps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+
 PRODUCT_NAME := rr_dumpling
 PRODUCT_DEVICE := dumpling
 PRODUCT_MANUFACTURER := OnePlus
