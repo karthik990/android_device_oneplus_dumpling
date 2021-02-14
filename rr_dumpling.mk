@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/dumpling/device.mk)
 
 # Inherit PixelGApps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+#$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
@@ -52,6 +52,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="OnePlus5T-user 8.1.0 OPM1.171019.011 1 release-keys"
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys"
 
 TARGET_VENDOR := oneplus
